@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>COZINHA DA JÓ</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  🍔 COZINHA DA JÓ
+</header>
+
+<div class="container">
+
+  <!-- MENU (PRODUTOS) -->
+  <div class="menu" id="menu"></div>
+
+  <!-- CARRINHO -->
+  <div class="cart">
+
+    <h2>🛒 Carrinho</h2>
+
+    <div class="cliente">
+      <input type="text" id="nomeCliente" placeholder="Seu nome">
+      <input type="text" id="endereco" placeholder="Endereço de entrega">
+    </div>
+
+    <div id="cart-items"></div>
+
+    <p class="total">Total: R$ <span id="total">0</span></p>
+
+    <button class="btn-finalizar" onclick="finalizarPedido()">
+      Finalizar Pedido
+    </button>
+
+<h3>💳 Forma de pagamento</h3>
+
+<select id="pagamento">
+  <option value="">Selecione</option>
+  <option value="Dinheiro">Dinheiro</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Pix">Pix</option>
+</select>
+
+<div id="pix-area" style="display:none;">
+  <p>🔑 Chave Pix:</p>
+  <strong>27999802794</strong>
+</div>
+
+  </div>
+
+<div id="pix-area" style="display:none;">
+  <p>🔑 Chave Pix:</p>
+  <strong>27999802794</strong>
+
+  <p>📷 Escaneie o QR Code:</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=27999802794" id="qr-pix">
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
